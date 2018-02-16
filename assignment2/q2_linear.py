@@ -57,10 +57,10 @@ class Linear(DQN):
 
         state_history = self.config.state_history
         batch_size = None
-        self.s = tf.placeholder(tf.uint8, shape=(batch_size, 5, 5, 1 * state_history), name="s")
+        self.s = tf.placeholder(tf.uint8, shape=(batch_size, state_shape[0], state_shape[1], state_shape[2] * state_history), name="s")
         self.a = tf.placeholder(tf.int32, shape=(batch_size), name="a")
         self.r = tf.placeholder(tf.float32, shape=(batch_size), name="r")
-        self.sp = tf.placeholder(tf.uint8, shape=(batch_size, 5, 5, 1 * state_history), name="sp")
+        self.sp = tf.placeholder(tf.uint8, shape=(batch_size, state_shape[0], state_shape[1], state_shape[2] * state_history), name="sp")
         self.done_mask = tf.placeholder(tf.bool, shape=(batch_size), name="done_mask")
         self.lr = tf.placeholder(tf.float32, name="lr")
 
@@ -154,8 +154,8 @@ class Linear(DQN):
         ################### YOUR CODE HERE - 5-10 lines #############
         
         opAssigns = []
-        q_values = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=q_scope)
-        target_q_values = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=target_q_scope)
+        q_values = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope=q_scope)
+        target_q_values = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope=target_q_scope)
         for i in range(len(q_values)):
             opAssigns.append(tf.assign(target_q_values[i], q_values[i]))
         self.update_target_op = tf.group(*opAssigns)
@@ -247,17 +247,15 @@ class Linear(DQN):
         ##############################################################
         #################### YOUR CODE HERE - 8-12 lines #############
         adam_optimizer = tf.train.AdamOptimizer(learning_rate=self.lr)
-        variables = tf.get_collection(tf.GraphKeys.MODEL_VARIABLES, scope=scope)
+        variables = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope=scope)
         gnv = adam_optimizer.compute_gradients(self.loss, variables) # [[grad1, name1], [grad2, name2], ...]
+	g, v = list(zip(*gnv))
         
-        if self.config.grad_clip == True:
-            for i, (grad, var) in enumerate(gnv):
-                if grad is not None:
-                    gnv[i] = (tf.clip_by_norm(grad, self.config.clip_val), var)
+        if self.config.grad_clip:
+            g, _ = tf.clip_by_global_norm(g, self.config.clip_val)
 
-        grads = [gradient for gradient, var in gnv]
-        self.train_op = adam_optimizer.apply_gradients(gnv)
-        self.grad_norm = tf.global_norm(grads)
+        self.train_op = adam_optimizer.apply_gradients(list(zip(g, v)))
+        self.grad_norm = tf.global_norm(g)
         
         ##############################################################
         ######################## END YOUR CODE #######################

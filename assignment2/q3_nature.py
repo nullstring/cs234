@@ -41,6 +41,8 @@ class NatureQN(Linear):
               you may find the section "model architecture" of the appendix of the 
               nature paper particulary useful.
 
+              84x84x4 -> 32 8x8 stride 4 -> 64 4x4 stride 2 -> 64 3x3 stride 1 -> fc512 -> num_actions
+
               store your result in out of shape = (batch_size, num_actions)
 
         HINT: you may find tensorflow.contrib.layers useful (imported)
@@ -55,7 +57,35 @@ class NatureQN(Linear):
         ##############################################################
         ################ YOUR CODE HERE - 10-15 lines ################ 
 
-        pass
+        with tf.variable_scope(scope, reuse=reuse):
+            out = tf.layers.conv2d(
+                inputs=out,
+                filters=32,
+                kernel_size=[8, 8],
+                padding="same",
+                strides=(4, 4),
+                activation=tf.nn.relu)
+
+            out = tf.layers.conv2d(
+                inputs=out,
+                filters=64,
+                kernel_size=[4, 4],
+                padding="same",
+                strides=(2, 2),
+                activation=tf.nn.relu)
+
+            out = tf.layers.conv2d(
+                inputs=out,
+                filters=64,
+                kernel_size=[3, 3],
+                padding="same",
+                strides=(1, 1),
+                activation=tf.nn.relu)
+
+            out = layers.flatten(out)
+            out = layers.fully_connected(out, 512, activation_fn=tf.nn.relu, reuse=reuse)
+
+            out = layers.fully_connected(out, num_actions, activation_fn=None, reuse=reuse)
 
         ##############################################################
         ######################## END YOUR CODE #######################

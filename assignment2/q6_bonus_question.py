@@ -52,20 +52,74 @@ class MyDQN(Linear):
         out = state
         ##############################################################
         """
-        TODO: implement the computation of Q values like in the paper
-                    https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf
+        MyDQN learns a residual function in addition to the normal DQN conv layer function.
+	This kind of architecture is guaranteed to do at least as good as the DQN setup on
+	average since the model could always learn the residual to be zero if it doesn't add
+	any value.
 
-        HINT: you may find tensorflow.contrib.layers useful (imported)
-              make sure to understand the use of the scope param
+	The benefit of this network is that we can make the model much deeper (probably at the 
+	expense of training time per timestep) to get better performance. This implementation
+	adds just 1 residual group but more can be added to monotonically increase performance.
 
-              you can use any other methods from tensorflow
-              you are not allowed to import extra packages (like keras,
-              lasagne, cafe, etc.)
+	ResNets are known to be superior than vanilla conv models for various image related
+	tasks.
+
+	https://arxiv.org/abs/1512.03385
         """
         ##############################################################
         ################ YOUR CODE HERE - 10-15 lines ################ 
-        
-        pass
+
+        with tf.variable_scope(scope, reuse=reuse):
+            out = tf.layers.conv2d(
+                inputs=out,
+                filters=32,
+                kernel_size=[8, 8],
+                padding="same",
+                strides=(4, 4),
+                activation=tf.nn.relu)
+
+            out = tf.layers.conv2d(
+                inputs=out,
+                filters=64,
+                kernel_size=[4, 4],
+                padding="same",
+                strides=(2, 2),
+                activation=tf.nn.relu)
+
+            out = tf.layers.conv2d(
+                inputs=out,
+                filters=64,
+                kernel_size=[3, 3],
+                padding="same",
+                strides=(1, 1),
+                activation=tf.nn.relu)
+            # store the results.
+            res = out
+
+            # Learn the residual.
+            out = tf.layers.conv2d(
+                inputs=out,
+                filters=64,
+                kernel_size=[3, 3],
+                padding="same",
+                strides=(1, 1),
+                activation=tf.nn.relu)
+
+            out = tf.layers.conv2d(
+                inputs=out,
+                filters=64,
+                kernel_size=[3, 3],
+                padding="same",
+                strides=(1, 1),
+                activation=tf.nn.relu)
+            # skip connection. The acrhitecture should perform no-worse than the one implemented in q5
+            # since the network can learn the residual to be zero to match q5 performance. 
+            out = res + out
+
+            out = layers.flatten(out)
+            out = layers.fully_connected(out, 512, activation_fn=tf.nn.relu, reuse=reuse)
+
+            out = layers.fully_connected(out, num_actions, activation_fn=None, reuse=reuse)        
 
         ##############################################################
         ######################## END YOUR CODE #######################
