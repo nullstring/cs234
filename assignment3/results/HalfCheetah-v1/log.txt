@@ -1,0 +1,117 @@
+2018-02-18 19:39:52,611:INFO: Making new env: HalfCheetah-v1
+2018-02-18 19:39:52,626:INFO: Starting new video recorder writing to /Users/harshm/Documents/GitHub/cs234/assignment3/results/HalfCheetah-v1/openaigym.video.0.86349.video000000.mp4
+2018-02-18 19:40:06,170:INFO: Average reward: -2811.54 +/- 0.00
+2018-02-18 19:40:06,335:INFO: Finished writing results. You can upload them to the scoreboard via gym.upload('/Users/harshm/Documents/GitHub/cs234/assignment3/results/HalfCheetah-v1')
+2018-02-18 19:42:55,372:INFO: Average reward: -2973.35 +/- 19.56
+2018-02-18 19:45:41,740:INFO: Average reward: -1748.36 +/- 25.68
+2018-02-18 19:48:34,694:INFO: Average reward: -1081.10 +/- 14.91
+2018-02-18 19:51:25,839:INFO: Average reward: -861.04 +/- 12.00
+2018-02-19 14:06:20,560:INFO: Making new env: HalfCheetah-v1
+2018-02-19 14:06:20,573:INFO: Starting new video recorder writing to /Users/harshm/Documents/GitHub/cs234/assignment3/results/HalfCheetah-v1/openaigym.video.0.6926.video000000.mp4
+2018-02-19 14:07:00,830:INFO: Average reward: -4569.66 +/- 0.00
+2018-02-19 14:07:01,359:INFO: Finished writing results. You can upload them to the scoreboard via gym.upload('/Users/harshm/Documents/GitHub/cs234/assignment3/results/HalfCheetah-v1')
+2018-02-19 14:08:00,370:INFO: Average reward: -4452.87 +/- 24.36
+2018-02-19 14:08:57,961:INFO: Average reward: -1955.75 +/- 17.51
+2018-02-19 14:09:55,815:INFO: Average reward: -1935.53 +/- 30.07
+2018-02-19 14:10:50,962:INFO: Average reward: -1595.53 +/- 17.68
+2018-02-19 14:11:49,679:INFO: Average reward: -1169.15 +/- 13.96
+2018-02-19 14:12:46,524:INFO: Average reward: -942.64 +/- 10.73
+2018-02-19 14:13:37,268:INFO: Average reward: -753.32 +/- 15.38
+2018-02-19 14:14:28,226:INFO: Average reward: -636.55 +/- 17.95
+2018-02-19 14:15:23,343:INFO: Average reward: -600.17 +/- 20.36
+2018-02-19 14:16:14,636:INFO: Average reward: -542.21 +/- 13.61
+2018-02-19 14:17:09,722:INFO: Average reward: -489.91 +/- 12.90
+2018-02-19 14:18:07,007:INFO: Average reward: -465.73 +/- 8.09
+2018-02-19 14:19:01,010:INFO: Average reward: -413.85 +/- 11.16
+2018-02-19 14:19:53,451:INFO: Average reward: -394.78 +/- 9.38
+2018-02-19 14:20:46,550:INFO: Average reward: -355.18 +/- 9.96
+2018-02-19 14:21:40,032:INFO: Average reward: -310.48 +/- 8.98
+2018-02-19 14:22:33,477:INFO: Average reward: -305.65 +/- 7.00
+2018-02-19 14:23:24,792:INFO: Average reward: -290.09 +/- 9.37
+2018-02-19 14:24:17,697:INFO: Average reward: -283.75 +/- 8.41
+2018-02-19 14:25:11,898:INFO: Average reward: -243.00 +/- 5.23
+2018-02-19 14:26:03,196:INFO: Average reward: -236.43 +/- 8.36
+2018-02-19 14:26:53,888:INFO: Average reward: -215.61 +/- 7.65
+2018-02-19 14:27:45,401:INFO: Average reward: -188.87 +/- 6.37
+2018-02-19 14:28:37,157:INFO: Average reward: -191.55 +/- 6.40
+2018-02-19 14:29:31,998:INFO: Average reward: -171.46 +/- 6.53
+2018-02-19 14:30:29,737:INFO: Average reward: -143.69 +/- 4.85
+2018-02-19 14:31:24,831:INFO: Average reward: -129.05 +/- 4.80
+2018-02-19 14:32:19,075:INFO: Average reward: -116.86 +/- 6.89
+2018-02-19 14:33:14,492:INFO: Average reward: -112.97 +/- 7.66
+2018-02-19 14:34:06,886:INFO: Average reward: -108.72 +/- 7.06
+2018-02-19 14:35:01,026:INFO: Average reward: -105.16 +/- 6.78
+2018-02-19 14:35:54,722:INFO: Average reward: -81.17 +/- 8.79
+2018-02-19 14:36:49,546:INFO: Average reward: -87.91 +/- 8.17
+2018-02-19 14:37:44,753:INFO: Average reward: -83.16 +/- 7.49
+2018-02-19 14:38:40,161:INFO: Average reward: -91.74 +/- 10.06
+2018-02-19 14:39:34,748:INFO: Average reward: -84.22 +/- 9.37
+2018-02-19 14:40:29,620:INFO: Average reward: -95.41 +/- 10.47
+2018-02-19 14:41:21,302:INFO: Average reward: -107.09 +/- 9.60
+2018-02-19 14:42:12,485:INFO: Average reward: -80.55 +/- 11.85
+2018-02-19 14:43:03,721:INFO: Average reward: -81.48 +/- 10.76
+2018-02-19 14:43:56,289:INFO: Average reward: -69.81 +/- 10.21
+2018-02-19 14:44:49,116:INFO: Average reward: -67.81 +/- 11.36
+2018-02-19 14:45:42,479:INFO: Average reward: -70.64 +/- 10.29
+2018-02-19 14:46:37,151:INFO: Average reward: -54.09 +/- 8.15
+2018-02-19 14:47:30,337:INFO: Average reward: -63.72 +/- 11.25
+2018-02-19 14:48:23,679:INFO: Average reward: -51.56 +/- 7.37
+2018-02-19 14:49:17,018:INFO: Average reward: -73.45 +/- 5.81
+2018-02-19 14:50:08,065:INFO: Average reward: -75.09 +/- 4.45
+2018-02-19 14:50:58,532:INFO: Average reward: -52.67 +/- 4.21
+2018-02-19 14:51:48,697:INFO: Average reward: -59.03 +/- 5.58
+2018-02-19 14:52:40,306:INFO: Average reward: -46.45 +/- 6.75
+2018-02-19 14:53:31,608:INFO: Average reward: -27.68 +/- 4.31
+2018-02-19 14:54:25,514:INFO: Average reward: -17.94 +/- 4.97
+2018-02-19 14:55:17,084:INFO: Average reward: -0.40 +/- 4.99
+2018-02-19 14:56:09,704:INFO: Average reward: 27.13 +/- 5.31
+2018-02-19 14:57:05,605:INFO: Average reward: 38.45 +/- 4.48
+2018-02-19 14:58:01,838:INFO: Average reward: 64.32 +/- 6.12
+2018-02-19 14:58:58,608:INFO: Average reward: 88.03 +/- 5.83
+2018-02-19 14:59:52,308:INFO: Average reward: 147.65 +/- 6.03
+2018-02-19 15:00:46,199:INFO: Average reward: 197.61 +/- 9.27
+2018-02-19 15:01:40,803:INFO: Average reward: 265.65 +/- 18.36
+2018-02-19 15:02:40,837:INFO: Average reward: 382.03 +/- 13.33
+2018-02-19 15:03:38,821:INFO: Average reward: 406.00 +/- 20.54
+2018-02-19 15:04:34,997:INFO: Average reward: 324.95 +/- 28.63
+2018-02-19 15:05:33,512:INFO: Average reward: 233.83 +/- 26.74
+2018-02-19 15:06:27,784:INFO: Average reward: 152.53 +/- 37.34
+2018-02-19 15:07:24,385:INFO: Average reward: 248.57 +/- 43.01
+2018-02-19 15:08:19,599:INFO: Average reward: 400.58 +/- 55.10
+2018-02-19 15:09:14,465:INFO: Average reward: 481.75 +/- 36.64
+2018-02-19 15:10:09,981:INFO: Average reward: 489.03 +/- 33.81
+2018-02-19 15:11:05,046:INFO: Average reward: 330.19 +/- 65.97
+2018-02-19 15:12:00,690:INFO: Average reward: 223.33 +/- 64.43
+2018-02-19 15:12:55,856:INFO: Average reward: 48.21 +/- 40.02
+2018-02-19 15:13:52,434:INFO: Average reward: 19.22 +/- 29.95
+2018-02-19 15:14:42,879:INFO: Average reward: 26.25 +/- 23.65
+2018-02-19 15:15:33,222:INFO: Average reward: -4.16 +/- 20.18
+2018-02-19 15:16:23,693:INFO: Average reward: 48.69 +/- 25.27
+2018-02-19 15:17:14,289:INFO: Average reward: 143.20 +/- 30.67
+2018-02-19 15:18:11,136:INFO: Average reward: 346.34 +/- 12.26
+2018-02-19 15:19:05,891:INFO: Average reward: 303.30 +/- 34.77
+2018-02-19 15:20:05,961:INFO: Average reward: 220.77 +/- 56.66
+2018-02-19 15:21:03,060:INFO: Average reward: 151.34 +/- 63.00
+2018-02-19 15:21:55,986:INFO: Average reward: 183.66 +/- 66.86
+2018-02-19 15:22:50,251:INFO: Average reward: 68.70 +/- 44.88
+2018-02-19 15:23:44,513:INFO: Average reward: 145.61 +/- 32.46
+2018-02-19 15:24:40,707:INFO: Average reward: 177.04 +/- 30.62
+2018-02-19 15:25:37,453:INFO: Average reward: 241.21 +/- 43.17
+2018-02-19 15:26:36,954:INFO: Average reward: 473.18 +/- 61.37
+2018-02-19 15:27:33,206:INFO: Average reward: 465.43 +/- 67.62
+2018-02-19 15:28:30,376:INFO: Average reward: 617.30 +/- 59.68
+2018-02-19 15:29:25,850:INFO: Average reward: 717.35 +/- 29.65
+2018-02-19 15:30:17,750:INFO: Average reward: 674.71 +/- 12.56
+2018-02-19 15:31:09,995:INFO: Average reward: 720.07 +/- 38.14
+2018-02-19 15:32:00,903:INFO: Average reward: 849.05 +/- 35.41
+2018-02-19 15:32:51,523:INFO: Average reward: 827.04 +/- 59.56
+2018-02-19 15:33:42,642:INFO: Average reward: 747.69 +/- 53.67
+2018-02-19 15:34:34,027:INFO: Average reward: 532.93 +/- 84.66
+2018-02-19 15:35:24,740:INFO: Average reward: 808.59 +/- 35.22
+2018-02-19 15:36:15,277:INFO: Average reward: 915.44 +/- 18.59
+2018-02-19 15:37:05,822:INFO: Average reward: 849.04 +/- 15.33
+2018-02-19 15:37:05,824:INFO: - Training done.
+2018-02-19 15:37:06,227:INFO: Making new env: HalfCheetah-v1
+2018-02-19 15:37:06,278:INFO: Starting new video recorder writing to /Users/harshm/Documents/GitHub/cs234/assignment3/results/HalfCheetah-v1/openaigym.video.1.6926.video000000.mp4
+2018-02-19 15:37:42,544:INFO: Average reward: 941.28 +/- 0.00
+2018-02-19 15:37:42,775:INFO: Finished writing results. You can upload them to the scoreboard via gym.upload('/Users/harshm/Documents/GitHub/cs234/assignment3/results/HalfCheetah-v1')
